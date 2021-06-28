@@ -1,4 +1,6 @@
 # WebCrawlerApplication
+This application will fetch all the URLs related to the URL given in the request and also provides the matched URLs based on searchedText.
+
 #How to run application
 Clone the code by git repository into your local directory and open it as Maven Project in IntelliJ or Eclipse.
 Start the Application by using Play/Run button and use the application using swagger URL provided below.
