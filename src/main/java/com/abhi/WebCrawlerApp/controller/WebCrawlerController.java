@@ -20,7 +20,7 @@ public class WebCrawlerController {
     WebcrawlerService webcrawlerService;
 
     @PostMapping("/getWebCrawlerDetails")
-    @ApiOperation(value = "To get webcrawler details", notes = "URL = to fetch URLs related to URL, \n searchText= to search in fetched URLList and return ones matches with \".searchText.\" \n" +
+    @ApiOperation(value = "To get webcrawler details", notes = "URL = to fetch URLs related to URL, \n searchText= to search in fetched URL list and return ones matches with \".searchText.\" & \\searchText\\ \n" +
             "level : to limit the depth of searching URLs")
     public ResponseEntity<?> getWebCrawlerDetails(@RequestBody WebCrawlerRequest request) throws Exception{
         if(request==null){
