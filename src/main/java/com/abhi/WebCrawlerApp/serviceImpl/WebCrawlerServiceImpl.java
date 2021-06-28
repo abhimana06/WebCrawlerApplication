@@ -23,6 +23,12 @@ public class WebCrawlerServiceImpl implements WebcrawlerService {
 
     private static int diglevel = 1;
 
+    /**
+     * This function gives the URLs and matched URLs based on given seacrhText
+     * @param request
+     * @return
+     * @throws IOException
+     */
     @Override
     public WebCrawlerResponse getDetails(WebCrawlerRequest request) throws IOException {
         log.info("WebCrawlerServiceImpl - START");
@@ -49,6 +55,9 @@ public class WebCrawlerServiceImpl implements WebcrawlerService {
         return response;
     }
 
+    /*
+    Recursive function
+     */
     private void crawl(int level, String url, List<String> links, String searchText) throws IOException {
         if(level <=diglevel){
             Document document = requestCrawl(url, links);
@@ -79,7 +88,9 @@ public class WebCrawlerServiceImpl implements WebcrawlerService {
             return null;
         }
     }
-
+        /*
+        to get matched URLs
+         */
         private void searchedText(String searchedText, List<String> subLinks, List<String> matchedLinks) {
             try {
                 subLinks.forEach(a -> {
