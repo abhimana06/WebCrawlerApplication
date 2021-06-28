@@ -7,6 +7,9 @@ Start the Application by using Play/Run button and use the application using swa
 
 #Swagger URL : http://localhost:9090/swagger-ui.html#
 
+<img width="1427" alt="Screenshot 2021-06-29 at 12 54 24 AM" src="https://user-images.githubusercontent.com/59757975/123674842-a7536b00-d874-11eb-8010-b1e273449ac9.png">
+
+
 API : /webCrawler/getWebCrawlerDetails
 Method : POST
 
