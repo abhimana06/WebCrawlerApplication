@@ -90,19 +90,19 @@ public class WebCrawlerServiceImpl implements WebcrawlerService {
     }
         /*
         to get matched URLs
+        can change the search based on different logic
          */
         private void searchedText(String searchedText, List<String> subLinks, List<String> matchedLinks) {
             try {
                 subLinks.forEach(a -> {
                     if(a.contains("."+searchedText+".")==true || a.contains("/"+searchedText+"/")==true){
-                        String link = a;
-                        String temp = "text: " + searchedText + " link: " + link;
-                        matchedLinks.add(temp);
-                        log.info(temp);
+                        String link = "text: " + searchedText + " link: " + a;
+                        matchedLinks.add(link);
+                        log.info(link);
                     }
                 });
             } catch (Exception e) {
-                log.error("Error occured while searching the text : {}",e.getMessage());
+                log.error("Error occured in searchedText Method: {}",e.getMessage());
                 e.printStackTrace();
             }
         }

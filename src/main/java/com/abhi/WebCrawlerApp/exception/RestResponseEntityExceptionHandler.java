@@ -37,8 +37,8 @@ public class RestResponseEntityExceptionHandler extends ResponseEntityExceptionH
 
     @ExceptionHandler({ AppException.class })
     protected ResponseEntity<Object> handleAppException(final RuntimeException ex, final WebRequest request) {
-        log.error("Error : ",ex);
         AppException appEx = (AppException)ex;
-        return new ResponseEntity<>(ex,HttpStatus.INTERNAL_SERVER_ERROR);
+        log.error("Error : ",appEx.getMessage());
+        return new ResponseEntity<>(appEx.getMessage(),HttpStatus.INTERNAL_SERVER_ERROR);
     }
 }
