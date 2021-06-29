@@ -96,7 +96,7 @@ public class WebCrawlerServiceImpl implements WebcrawlerService {
             try {
                 subLinks.forEach(a -> {
                     if(a.contains("."+searchedText+".")==true || a.contains("/"+searchedText+"/")==true){
-                        String link = "text: " + searchedText + " link: " + a;
+                        String link = "searchedText: " + searchedText + " link: " + a;
                         matchedLinks.add(link);
                         log.info(link);
                     }
