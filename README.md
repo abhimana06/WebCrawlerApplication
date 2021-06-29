@@ -26,6 +26,7 @@ Response:
 {
   "searchedURL": "http://www.google.com",
   "searchedText": "google",
+  
   "links": [
     "http://www.google.com",
     "https://mail.google.com/mail/&ogbl",
@@ -75,6 +76,7 @@ Response:
     "https://www.google.com/search/about/#jump-content",
     "https://search.app.goo.gl/?link=https://play.google.com/store/apps/details?id=com.google.android.googlequicksearchbox&apn=com.google.android.googlequicksearchbox&al=googleapp%3A%2F%2Fdeeplink%2F%3Fdata%3DCksBDb3mGzBEAiAuIhh7GaFTR_dlud5exBE8PSJX-mttN37tZqeYAb8LYQIgcl8Ed0YeWyjSf1xP6F2vWBpdGnbSCcSAFmywPzgGoWESoQEKBgjzsrOPARICCHEaOxI5CAMSNYLR5vMELwotaHR0cHM6Ly93d3cuZ29vZ2xlLmNvbS9zZWFyY2g_cT13ZWF0aGVyJmhzaT0xIlYKVGh0dHA6Ly9wbGF5Lmdvb2dsZS5jb20vc3RvcmUvYXBwcy9kZXRhaWxzP2lkPWNvbS5nb29nbGUuYW5kcm9pZC5nb29nbGVxdWlja3NlYXJjaGJveA&ibi=com.google.GoogleMobile&isi=284815942&utm_source=web-gsa&utm_medium=owned&pt=9008&ct=web-gsa&mt=8"
   ],
+  
   "matchedLinks": [
     "text: google link: http://www.google.com",
     "text: google link: https://mail.google.com/mail/&ogbl",
