@@ -26,7 +26,6 @@ Response:
 {
   "searchedURL": "http://www.google.com",
   "searchedText": "google",
-  
   "links": [
     "http://www.google.com",
     "https://mail.google.com/mail/&ogbl",
