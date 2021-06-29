@@ -5,7 +5,7 @@ This application will fetch all the URLs related to the URL given in the request
 Clone the code by git repository into your local directory and open it as Maven Project in IntelliJ or Eclipse.
 Start the Application by using Play/Run button and use the application using swagger URL provided below.
 
-#Swagger URL : http://localhost:9090/swagger-ui.html#
+#Swagger URL : http://localhost:9091/dbs-wbc/swagger-ui.html#
 
 <img width="1427" alt="Screenshot 2021-06-29 at 12 54 24 AM" src="https://user-images.githubusercontent.com/59757975/123674842-a7536b00-d874-11eb-8010-b1e273449ac9.png">
 
