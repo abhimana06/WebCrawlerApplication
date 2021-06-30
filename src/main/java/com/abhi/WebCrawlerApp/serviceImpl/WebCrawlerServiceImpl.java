@@ -33,18 +33,16 @@ public class WebCrawlerServiceImpl implements WebcrawlerService {
     public WebCrawlerResponse getDetails(WebCrawlerRequest request) throws IOException {
         log.info("WebCrawlerServiceImpl - START");
         WebCrawlerResponse response = new WebCrawlerResponse();
-        HashSet<String> links = new HashSet<>();
-        List<List<String>> subLinks = new ArrayList<>();
+        List<String> crawlLinks = new ArrayList<>();
         List matchedLinks = new ArrayList();
         diglevel = request.getLevel();
         String url = request.getURL().trim();
         String searchText =  request.getSearchText();
         if(StringUtils.isEmpty(url) || StringUtils.isEmpty(searchText)){
-            throw new AppException(500, "URL/ SearchText is Empty");
+            throw new AppException(400, "URL/ SearchText is Empty");
         }
         log.info("url: {}", url);
         log.info("searchText: {}", searchText);
-        List<String> crawlLinks = new ArrayList<>();
         crawl(1, url,crawlLinks, searchText);
         searchedText(searchText, crawlLinks, matchedLinks);
         response.setSearchedURL(url);
@@ -92,9 +90,9 @@ public class WebCrawlerServiceImpl implements WebcrawlerService {
         to get matched URLs
         can change the search based on different logic
          */
-        private void searchedText(String searchedText, List<String> subLinks, List<String> matchedLinks) {
+        private void searchedText(String searchedText, List<String> crawlLinks, List<String> matchedLinks) {
             try {
-                subLinks.forEach(a -> {
+                crawlLinks.forEach(a -> {
                     if(a.contains("."+searchedText+".")==true || a.contains("/"+searchedText+"/")==true){
                         String link = "searchedText: " + searchedText + " link: " + a;
                         matchedLinks.add(link);
