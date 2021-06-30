@@ -24,7 +24,7 @@ public class WebCrawlerController {
             "level : to limit the depth of searching URLs")
     public ResponseEntity<?> getWebCrawlerDetails(@RequestBody WebCrawlerRequest request) throws Exception{
         if(request==null){
-            throw new AppException(401, "Request is Empty");
+            throw new AppException(400, "Bad Request/Request is Empty");
         }
         WebCrawlerResponse response = webcrawlerService.getDetails(request);
         return new ResponseEntity<>(response, HttpStatus.OK);
