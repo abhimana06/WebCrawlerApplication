@@ -34,7 +34,7 @@ public class WebCrawlerServiceImpl implements WebcrawlerService {
         log.info("WebCrawlerServiceImpl - START");
         WebCrawlerResponse response = new WebCrawlerResponse();
         List<String> crawlLinks = new ArrayList<>();
-        List matchedLinks = new ArrayList();
+        List<String> matchedLinks = new ArrayList<>();
         diglevel = request.getLevel();
         String url = request.getURL().trim();
         String searchText =  request.getSearchText();
